@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于模仿学习的双臂移动机器人化学实验操作技能学习方法研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        /* 自定义字体和样式 */
+        body { font-family: 'Lato', sans-serif; }
+        .author-block { margin-right: 15px; color: #2563eb; }
+        .btn-link { 
+            background-color: #1f2937; color: white; padding: 8px 16px; 
+            border-radius: 9999px; font-weight: 500; transition: 0.3s;
+            text-decoration: none;
+            display: inline-flex; align-items: center;
+        }
+        .btn-link:hover { background-color: #374151; }
+        /* 视频容器样式优化 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #e5e7eb; /* 加载前的背景色 */
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保持比例填满容器 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="max-w-4xl mx-auto pt-16 pb-8 text-center px-4">
+        <h1 class="text-4xl font-bold leading-tight mb-6">
+            基于<span class="text-blue-600">模仿学习</span>的双臂移动机器人<br>化学实验操作技能学习方法研究
+        </h1>
+        
+        <div class="text-lg mb-4">
+            <span class="author-block"><a href="#" class="hover:underline">赵辰怿</a></span>
+        </div>
+        <div class="text-gray-600 mb-6">
+            同济大学 电子与信息工程学院 
+        </div>
+
+        <div class="flex justify-center gap-4 mb-12">
+            <a href="#" class="btn-link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                演示视频 (Video)
+            </a>
+             </div>
+
+        <h3 class="text-2xl font-bold text-left mb-4">真机实验 (Real World Experiments)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            
+            <div class="rounded-lg overflow-hidden shadow-xl border border-gray-200 bg-white">
+                <div class="video-container">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="1.mp4" type="video/mp4">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+                <p class="text-sm text-gray-600 p-3 text-left">
+                    <strong>图 1-A:</strong> 真机操作演示一（物料投放）
+                </p>
+            </div>
+
+             <div class="rounded-lg overflow-hidden shadow-xl border border-gray-200 bg-white">
+                <div class="video-container">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="2.mp4" type="video/mp4">
+                        您的浏览器不支持 video 标签。
+                    </video>
+                </div>
+                <p class="text-sm text-gray-600 p-3 text-left">
+                    <strong>图 1-B:</strong> 真机操作演示二（试管开盖）
+                </p>
+            </div>
+        </div>
+
+
+        <h3 class="text-2xl font-bold text-left mb-4">仿真实验 (Simulation Experiments)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            
+            <div class="rounded-lg overflow-hidden shadow-xl border border-gray-200 bg-white">
+                <div class="video-container">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="text-sm text-gray-600 p-3 text-left">
+                    <strong>图 2-A:</strong> 仿真场景一（标准流程）
+                </p>
+            </div>
+
+           <div class="rounded-lg overflow-hidden shadow-xl border border-gray-200 bg-white">
+                 <div class="video-container">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="4.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="text-sm text-gray-600 p-3 text-left">
+                    <strong>图 2-B:</strong> 仿真场景二（材质、颜色泛化测试）
+                </p>
+            </div>
+
+            <div class="rounded-lg overflow-hidden shadow-xl border border-gray-200 bg-white">
+                 <div class="video-container">
+                    <video controls autoplay loop muted playsinline>
+                        <source src="5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="text-sm text-gray-600 p-3 text-left">
+                    <strong>图 2-C:</strong> 仿真场景三（光影泛化测试）
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="max-w-4xl mx-auto px-4 mb-12">
+        <h2 class="text-2xl font-bold border-b pb-2 mb-4">方法 (Method)</h2>
+        
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-3">基于可供性的网络架构 (Affordance-based Architecture)</h3>
+            <img src="4.jpg" alt="算法架构图" class="w-full rounded shadow-lg mb-2 border border-gray-100">
+            <p class="text-sm text-gray-600 mb-4">
+                <strong>图 3:</strong> 包含语义可供性（Semantic）与几何可供性（Geometric）的多模态编码-解码结构。
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                我们的核心创新在于<strong>多模态融合注意力模块</strong>。模型不仅仅依赖原始 RGB 图像，而是结合了多种关键信息源，从而提高在复杂化学实验场景下的操作精度与泛化能力。
+            </p>
+            <ul class="list-disc list-inside ml-4 text-gray-700 mt-2 space-y-1">
+                <li><strong>语义可供性 (Semantic Affordance)：</strong> 利用大语言模型提取自然语言任务描述中的关键上下文信息（如物品属性“易碎”、“高温”或操作类型“旋转”、“倾倒”）。</li>
+                <li><strong>几何可供性 (Geometric Affordance)：</strong> 从视觉输入中预测关键的几何特征，包括最佳接触点位置、末端执行器的方向向量以及未来的 3D 轨迹点。</li>
+                <li><strong>双臂交叉注意力 (Dual-Arm Cross-Attention)：</strong> 引入交叉注意力机制，使左臂和右臂的状态信息互为查询（Query）和键值（Key），实现双臂动作的协同规划与避障。</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="max-w-4xl mx-auto px-4 mb-12">
+        <h2 class="text-2xl font-bold border-b pb-2 mb-4">实验结果 (Experiments)</h2>
+        
+        <div class="mb-10">
+            <h3 class="text-xl font-semibold mb-3">1. 鲁棒性与泛化能力对比分析</h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+                为了验证提出方法的有效性，我们将 <strong>Afford-ACT</strong>（本文方法）与当前主流的基准算法（包括 ACT 和 Diffusion Policy）在多种干扰条件下进行了对比测试。实验结果表明，得益于可供性信息的引入，我们的方法在面对<strong>目标物体空间位移</strong>和<strong>环境光照剧烈变化</strong>等非结构化场景时，表现出显著优越的鲁棒性与泛化能力。
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <img src="1.jpg" alt="成功率对比图" class="w-full rounded border border-gray-200 shadow-sm">
+                    <p class="text-sm text-gray-600 mt-2 text-center"><strong>图 4:</strong> 不同干扰下的任务成功率对比</p>
+                </div>
+                <div>
+                    <img src="2.jpg" alt="loss对比图" class="w-full rounded border border-gray-200 shadow-sm">
+                     <p class="text-sm text-gray-600 mt-2 text-center"><strong>图 5:</strong> 训练与验证损失收敛曲线</p>
+                </div>
+                <div>
+                    <img src="3.jpg" alt="泛化对比雷达图" class="w-full rounded border border-gray-200 shadow-sm">
+                     <p class="text-sm text-gray-600 mt-2 text-center"><strong>图 6:</strong> 多维度泛化能力评估雷达图</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="max-w-4xl mx-auto px-4 mb-16">
+        <h2 class="text-lg font-bold mb-2">Citation</h2>
+        <div class="bg-gray-800 text-gray-200 p-4 rounded-lg overflow-x-auto font-mono text-sm shadow-inner">
+<pre>@article{zhao2025affordact,
+  title={Research on Dual-Arm Mobile Robot Chemical Experiment Operation Skill Learning},
+  author={Zhao, Chenyi},
+  journal={Tongji University Master Thesis},
+  year={2025}
+}</pre>
+        </div>
+    </section>
+
+    <footer class="text-center text-gray-500 py-8 text-sm border-t border-gray-200">
+        <p class="mb-2">Copyright © 2025 Chenyi Zhao. All Rights Reserved.</p>
+        <p>Template inspired by <a href="https://nerfies.github.io/" target="_blank" class="text-blue-500 hover:underline">Nerfies</a> project page.</p>
+    </footer>
+
+</body>
+</html> <div class="rounded-lg overflow-hidden shadow-xl border border-
